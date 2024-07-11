@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.bg-container {
+  position: relative;
+}
+
+.bg-container h1 {
+  position: absolute;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1px;
+  font-size: 100px;
+}
+
+.bg-container h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.bg-container h1:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0 38%,
+      24% 37%,
+      40% 53%,
+      59% 63%,
+      80% 61%,
+      97% 54%,
+      99% 51%,
+      99% 100%,
+      0 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0 56%,
+      21% 62%,
+      41% 61%,
+      56% 53%,
+      79% 40%,
+      88% 35%,
+      100% 35%,
+      99% 100%,
+      0 100%
+    );
+  }
+}
